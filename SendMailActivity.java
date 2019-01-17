@@ -24,17 +24,17 @@ public class SendMailActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("SendMailActivity", "Send Button Clicked.");
 
-                String fromEmail = "berfz23@gmail.com";
-                String fromPassword = "deniz.23";
+                String fromEmail = "test@gmail.com";
+                String fromPassword = "password";
 
-                String toEmails = "bdeniz.cakmak@std.hku.edu.tr,nyilmazsimsek@hku.edu.tr";
+                String toEmails = "mail addresses";
 
                 List<String> toEmailList = Arrays.asList(toEmails
                         .split("\\s*,\\s*"));
                 Log.i("SendMailActivity", "To List: " + toEmailList);
-                String emailSubject = "I DID IT";
+                String emailSubject = "test";
 
-                String emailBody = "Hello.This is a test for sending mail with damn Android.";
+                String emailBody = "Hello.";
                 new SendMailTask(SendMailActivity.this).execute(fromEmail,
                         fromPassword, toEmailList, emailSubject, emailBody);
             }
